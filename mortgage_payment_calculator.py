@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import math
 
+st.image("image.png")
 st.title("Mortgage Payment Calculator")
 st.write("### Enter Loan Details")
 
@@ -40,3 +41,34 @@ total_interest_paid = total_repayment - loan_principal
 
 st.write("### Mortgage Summary")
 
+col1, col2, col3 = st.columns(3)
+
+col1.metric(label="Monthly Payment", value=f"${monthly_payment:,.2f}")
+col2.metric(label="Total Repayment", value=f"${total_repayment:,.0f}")
+col3.metric(label="Total Interest Paid", value=f"${total_interest_paid:,.0f}")
+
+# Generate Payment Schedule
+payment_schedule = []
+remaining_balance = loan_principal
+
+for month in range(1, total_payments + 1):
+    if monthly_interest_rate == 0:
+        # No interest, just straight principal reduction
+        principal_payment = loan_principal / total_payments
+        interest_payment = 0
+    else:
+        interest_payment = remaining_balance * monthly_interest_rate
+        principal_payment = monthly_payment - interest_payment
+
+    remaining_balance -= principal_payment
+    year_number = math.ceil(month / 12)
+    payment_schedule.append([month, monthly_payment, principal_payment, interest_payment, remaining_balance, year_number])
+
+df_schedule = pd.DataFrame(
+    payment_schedule,
+    columns=["Month", "Monthly Payment", "Principal Paid", "Interest Paid", "Remaining Balance", "Year"]
+)
+
+st.write("#### Remaining Loan Balance Over Time")
+yearly_balance = df_schedule.groupby("Year")["Remaining Balance"].min()
+st.line_chart(yearly_balance, color="#ff725e")
