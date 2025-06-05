@@ -1,4 +1,4 @@
-# Mortgage Payment Calculator
+# mortgage-payment-calculator
 
 ![Mortgage Payment Calculator](https://github.com/yildiramdsa/mortgage_payment_calculator/blob/main/image.png)
 
