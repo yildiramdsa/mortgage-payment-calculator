@@ -1,5 +1,7 @@
 # mortgage-payment-calculator
 
+**Tech Stack:** ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
+
 A mortgage calculator app that estimates monthly payments, total repayment, and interest, with an interactive loan balance visualization.
 
 Explore the app online: https://yildiramdsa-mortgage-payment-mortgage-payment-calculator-dsaony.streamlit.app/
