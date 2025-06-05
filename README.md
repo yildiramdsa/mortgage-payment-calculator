@@ -4,6 +4,6 @@
 
 A mortgage calculator app that estimates monthly payments, total repayment, and interest, with an interactive loan balance visualization.
 
-Explore the app online: https://yildiramdsa-mortgage-payment-mortgage-payment-calculator-dsaony.streamlit.app/
+**Explore the app online:** [Mortgage Payment Calculator](https://yildiramdsa-mortgage-payment-mortgage-payment-calculator-dsaony.streamlit.app/)
 
-![Mortgage Payment Calculator](https://github.com/yildiramdsa/mortgage_payment_calculator/blob/main/image.png)
+![Mortgage Payment Calculator](https://raw.githubusercontent.com/yildiramdsa/mortgage_payment_calculator/main/image.png)
