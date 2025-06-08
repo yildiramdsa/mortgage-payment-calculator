@@ -1,4 +1,4 @@
-# mortgage-payment-calculator
+# Mortgage Payment Calculator
 
 **Tech Stack:** ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 
